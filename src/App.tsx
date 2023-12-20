@@ -78,7 +78,7 @@ const App = () => {
 
   const mintToken = () => {
     executeTransaction(
-      'data:,{"p":"brc-20","op":"mint","tick":"THMD","amt":"10"}',
+      'data:,{"p":"prc-20","op":"mint","tick":"THMD","amt":"10"}',
     );
   };
 
