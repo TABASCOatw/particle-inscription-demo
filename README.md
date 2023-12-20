@@ -26,7 +26,7 @@ Particle Auth Core, a component of Particle Network's Wallet-as-a-Service, enabl
 
 ### Clone this repository
 ```
-git clone https://github.com/TABASCOatw/particle-inscriptions-demo.git
+git clone https://github.com/TABASCOatw/particle-inscription-demo.git
 ```
 
 ### Install dependencies
