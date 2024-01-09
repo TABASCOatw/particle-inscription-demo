@@ -3,11 +3,13 @@
     <img src="https://i.imgur.com/xmdzXU4.png" />
   </a>
   <h3>
-    Particle Smart WaaS Inscription Demo
+    Particle Smart WaaS Inscription Demo (as used within The People's Alliance campaign)
   </h3>
 </div>
 
-⚡️ Demo application showcasing the creation, minting, and transfer of PRC-20 (inscription) tokens through Wallet-as-a-Service, in which the associated transactions are routed through a smart account and thus made gasless, all powered by the [Particle Auth Core SDK](https://docs.particle.network/developers/auth-service/core/web).
+⚡️ Demo application showcasing the creation, minting, and transfer of ORC-20 (inscriptions) tokens through Wallet-as-a-Service on Linea, in which the associated transactions are routed through a smart account and thus made gasless, all powered by the [Particle Auth Core SDK](https://docs.particle.network/developers/auth-service/core/web).
+
+This same methodology was used within Particle Network's "The People's Alliance" campaign (the largest community inscription event in Web3).
 
 Built using **Particle Auth Core**, **TypeScript**, **Particle AA SDK**
 
