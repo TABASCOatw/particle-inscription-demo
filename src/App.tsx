@@ -80,7 +80,7 @@ const App = () => {
       message: 'Transaction Successful',
       description: (
         <div>
-          Transaction Hash: <a href={`https://lineascan.build/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+          Transaction Hash: <a href={`https://polygonscan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
         </div>
       )
     });
@@ -104,7 +104,7 @@ const App = () => {
       message: 'Transaction Successful',
       description: (
         <div>
-          Transaction Hash: <a href={`https://lineascan.build/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
+          Transaction Hash: <a href={`https://polygonscan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
         </div>
       )
     });
