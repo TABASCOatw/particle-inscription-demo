@@ -11,10 +11,10 @@
   height: 94vh;
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f6f6f6;
+  background-color: #1a1a1a;
   box-shadow: 
-  10px -10px 30px 10px #7300ff, /* soft blue glow on bottom right */
-  -10px 10px 20px 10px #ff00f7; /* soft purple glow on top left */
+  10px -10px 30px 10px #ffffff,
+  -10px 10px 20px 10px #ff007a;
 }
 
 .login-section {
@@ -23,24 +23,31 @@
   gap: 10px;
 }
 
+.white-text {
+  color: white;
+  font-size: 12px;
+}
+
+
 .profile-card {
-  border: 2px solid #ccc;
+  border: 2px solid #555;
   border-radius: 5px;
   padding: 20px;
   width: 300px;
   text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  background-color: #2a2a2a;
 }
 
 .profile-card h2 {
   margin-top: 0;
   margin-bottom: 10px;
+  color: #ddd;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
+  background-color: #4a4a4a;
+  color: #f0f0f0;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -50,7 +57,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #626262;
 }
 
 .logo-section {
@@ -71,7 +78,7 @@ button:hover {
 }
 
 .sign-button {
-  background-color: grey;
+  background-color: #444;
   color: white;
   border: none;
   border-radius: 5px;
@@ -82,11 +89,11 @@ button:hover {
 }
 
 .sign-button:hover {
-  background-color: darkgrey;
+  background-color: #666;
 }
 
 button.sign-message-button {
-  background-color: grey;
+  background-color: #444;
   color: white;
   border: none;
   border-radius: 5px;
@@ -110,16 +117,12 @@ button.disconnect-button {
 .sign-button img {
   margin-right: 10px;
   vertical-align: middle;
-  width: 20px; /* Adjust the width as needed */
-  height: auto; /* This maintains the aspect ratio */
+  width: 20px;
+  height: auto;
 }
 
-.google-button {
-  background-color: #1b1c1d; /* Google's brand color */
-}
-
-.twitter-button {
-  background-color: #1b1c1d; /* Twitter's brand color */
+.google-button, .twitter-button {
+  background-color: #404040;
 }
 
 .balance-section {
@@ -133,11 +136,11 @@ button.disconnect-button {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+  transform: translate(-50%, -45%);
+  background-color: #2a2a2a;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
   z-index: 1000;
   animation: fadeIn 0.2s ease-in-out;
 }
@@ -148,7 +151,9 @@ button.disconnect-button {
   padding: 10px;
   margin: 10px auto;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #555;
+  background: #333;
+  color: #eee;
 }
 
 .modal button {
