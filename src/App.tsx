@@ -87,30 +87,37 @@ const App = () => {
     closeModal();
   };
 
-  const mintToken = async () => {
-    const signer = customProvider.getSigner();
-    const data = ethers.utils.hexlify(ethers.utils.toUtf8Bytes(`data:,{"p":"prc-20","op":"mint","tick":"${tokenTicker}","amt":"${amountToMint}"}`));
+  const mintToken = async (numOfTransactions = 1) => {
+      const txBatch = [];
+      for (let i = 0; i < numOfTransactions; i++) {
+          const data = ethers.utils.hexlify(ethers.utils.toUtf8Bytes(`data:,{"p":"prc-20","op":"mint","tick":"${tokenTicker}","amt":"${amountToMint}"}`));
 
-    const tx = {
-      to: address,
-      value: 0,
-      data,
-    };
+          const tx = {
+              to: address, 
+              value: 0, 
+              data,
+          };
+          txBatch.push(tx);
+      }
 
-    const txResponse = await signer.sendTransaction(tx);
-    const txReceipt = await txResponse.wait();
+      const batchTx = {
+          tx: txBatch,
+      };
 
-    notification.success({
-      message: 'Transaction Successful',
-      description: (
-        <div>
-          Transaction Hash: <a href={`https://polygonscan.com/tx/${txReceipt.transactionHash}`} target="_blank" rel="noopener noreferrer">{txReceipt.transactionHash}</a>
-        </div>
-      )
-    });
+          const txResponse = await smartAccount.sendTransaction(batchTx);
 
-    closeModal();
+          notification.success({
+              message: 'Transaction Successful',
+              description: (
+                  <div>
+                      Transaction Hash: <a href={`https://polygonscan.com/tx/${txResponse}`} target="_blank" rel="noopener noreferrer">{txResponse}</a>
+                  </div>
+              )
+          });
+
+      closeModal();
   };
+
 
   return (
     <div className="App">
@@ -175,7 +182,8 @@ const App = () => {
             value={amountToMint}
             onChange={(e) => setAmountToMint(e.target.value)}
           />
-          <button onClick={mintToken}>Mint Token</button>
+          <button onClick={() => mintToken()}>Mint Token</button>
+          <button onClick={() => mintToken(10)}>Mint Token (x10)</button>
           <button onClick={closeModal}>Close</button>
         </div>
       )}
